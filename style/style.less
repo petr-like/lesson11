@@ -4,6 +4,28 @@
     background: #ccc;
     height: 100vh;
 }
+
+.item-meu {
+    margin-left: 10px;
+    margin-bottom: 10px;
+
+    &:hover{
+        color: red !important;
+        text-decoration: none;
+    }
+
+    &::before {
+        content: "-";
+    }
+
+    a {
+        transition: all 0.4s;
+    }
+}
+
+
+
+
 .item-menu{
     margin-left: 10px;
     margin-bottom: 10px;
@@ -12,8 +34,7 @@
     transition: all 0.4s;
     
 } 
-.item-menu::before{
-    content: "-"; 
+
 }
 .item-menu:hover a{
     color: red !important;
