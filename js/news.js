@@ -13,7 +13,7 @@ fetch(`${url}${apiKey}`)
   })
   .catch( alert );
 
-$(document).ready(() => {
+$(document).ready(function() {
     for(let i = 0; i < 5; i++) {
         news[i].content ? addNews(news[i]) : i--;
     }
