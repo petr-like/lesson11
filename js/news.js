@@ -3,10 +3,9 @@ let url = 'https://newsapi.org/v2/top-headlines?country=ua&category=science&apiK
 
 fetch(`${url}${apiKey}`)
   .then((response) => {
-    console.log(1, response.json());
     return response.json();
    })
-  .then((user) => {
-      console.log(2, user);
+  .then((data) => {
+      console.log(2, data);
   })
   .catch( alert );
