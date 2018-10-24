@@ -4,16 +4,16 @@ let url = 'https://newsapi.org/v2/top-headlines?country=ua&category=science&apiK
 let news;
 let data = '';
 
-fetch(`${url}${apiKey}`)
-  .then((response) => {
-    return response.json();
-   })
-  .then((data) => {
-      news = data.articles;
-  })
-  .catch( alert );
-
 $(document).ready(function() {
+    fetch(`${url}${apiKey}`)
+    .then((response) => {
+    return response.json();
+    })
+    .then((data) => {
+        news = data.articles;
+    })
+    .catch( alert );
+
     for(let i = 0; i < 5; i++) {
         news[i].content ? addNews(news[i]) : i--;
     }
